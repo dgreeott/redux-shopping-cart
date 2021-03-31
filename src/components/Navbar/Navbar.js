@@ -13,24 +13,30 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbarItems">
-      <Link to="/" className="brand-logo">Shopping</Link>
-        <div className="menu-icon" onClick={this.handleClick}>
-          <i
-            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
-          ></i>
-        </div>
-        <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-          {ListItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <Link className={item.cName} to={item.url}>
-                  {item.title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+      <nav className="navbarItems justify-content-end">
+          <div className="col-sm-3">
+            <Link to="/" className="brand-logo ">
+              <h2>Shopping</h2>
+            </Link>
+          </div>
+          <div className="col-sm-9">
+            <div className="menu-icon" onClick={this.handleClick}>
+              <i
+                className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+              ></i>
+            </div>
+            <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+              {ListItems.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <Link className={item.cName} to={item.url}>
+                      {item.title}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
       </nav>
     );
   }
