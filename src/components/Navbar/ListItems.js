@@ -7,11 +7,6 @@ export const ListItems = [
       cName: "nav-links",
     },
     {
-      title: "My Cart",
-      url: "/cart",
-      cName: "nav-links",
-    },
-    {
       title: <FiShoppingCart />,
       url: "/cart",
       cName: "nav-links",

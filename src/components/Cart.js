@@ -1,23 +1,25 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { removeItem,addQuantity,subtractQuantity} from './actions/cartActions'
+import {
+  removeItem,
+  addQuantity,
+  subtractQuantity,
+} from "./actions/cartActions";
 import Recipe from "./Recipe";
 
 class Cart extends Component {
-
-    handleRemove = (id)=>{
-        this.props.removeItem(id);
-    }
-    //to add the quantity
-    handleAddQuantity = (id)=>{
-        this.props.addQuantity(id);
-    }
-    //to substruct from the quantity
-    handleSubtractQuantity = (id)=>{
-        this.props.subtractQuantity(id);
-    }
-
+  handleRemove = (id) => {
+    this.props.removeItem(id);
+  };
+  //to add the quantity
+  handleAddQuantity = (id) => {
+    this.props.addQuantity(id);
+  };
+  //to substruct from the quantity
+  handleSubtractQuantity = (id) => {
+    this.props.subtractQuantity(id);
+  };
 
   render() {
     let addedItems = this.props.items.length ? (
@@ -39,13 +41,17 @@ class Cart extends Component {
               </p>
               <div className="add-remove">
                 <Link to="/cart">
-                  <i className="material-icons">arrow_drop_up</i>
+                  <button className="btn btn-secondary m-2">
+                    arrow_drop_up
+                  </button>
                 </Link>
                 <Link to="/cart">
-                  <i className="material-icons">arrow_drop_down</i>
+                  <button className="btn btn-secondary m-2">
+                    arrow_drop_down
+                  </button>
                 </Link>
               </div>
-              <button className="waves-effect waves-light btn pink remove">
+              <button className="btn btn-primary remove">
                 Remove
               </button>
             </div>
@@ -56,10 +62,18 @@ class Cart extends Component {
       <p>Nothing.</p>
     );
     return (
-      <div className="container">
-        <div className="cart">
-          <h5>You have ordered:</h5>
-          <ul className="collection">{addedItems}</ul>
+      <div className="container justify-content-center">
+        <div className="row">
+          <div className="col-sm">
+            <h3>You have ordered:</h3>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm text-center">
+            <ul className="collection">{addedItems}</ul>
+          </div>
+        </div>
+        <div className="row">
           <Recipe />
         </div>
       </div>
@@ -73,11 +87,17 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch)=>{
-    return{
-        removeItem: (id)=>{dispatch(removeItem(id))},
-        addQuantity: (id)=>{dispatch(addQuantity(id))},
-        subtractQuantity: (id)=>{dispatch(subtractQuantity(id))}
-    }
-}
-export default connect(mapStateToProps,mapDispatchToProps)(Cart)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    removeItem: (id) => {
+      dispatch(removeItem(id));
+    },
+    addQuantity: (id) => {
+      dispatch(addQuantity(id));
+    },
+    subtractQuantity: (id) => {
+      dispatch(subtractQuantity(id));
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addToCart } from './actions/cartActions'
+import { addToCart } from "./actions/cartActions";
+
+import { FaShoppingBag } from "react-icons/fa";
 
 class Home extends Component {
   handleClick = (id) => {
@@ -10,21 +12,29 @@ class Home extends Component {
   render() {
     let itemList = this.props.items.map((item) => {
       return (
-        <div className="card" key={item.id}>
-          <div className="card-image">
-            <img src={item.img} alt={item.title} />
-            <span className="card-title">{item.title}</span>
-            
-              
-            
-          </div>
-          <button onClick={()=>{this.handleClick(item.id)}}>add</button>
+        <div className="col-sm m-3">
+          <div className="card" key={item.id}>
+            <div classname="row m-3 justify-content-end">
+              <div classname="col-sm text-end">
+                <FaShoppingBag
+                  size={20}
+                  onClick={() => {
+                    this.handleClick(item.id);
+                  }}
+                />
+              </div>
+            </div>
 
-          <div className="card-content">
-            <p>{item.desc}</p>
-            <p>
-              <b>Price: {item.price}$</b>
-            </p>
+            <div className="card-image-top">
+              <img src={item.img} alt={item.title} />
+            </div>
+            <div className="card-body">
+              <span className="card-title">
+                <h4>{item.title}</h4>
+              </span>
+
+              <h6>Price: {item.price}$</h6>
+            </div>
           </div>
         </div>
       );
@@ -32,8 +42,8 @@ class Home extends Component {
     return (
       <>
         <div className="container">
-          <h3 className="center">Our items</h3>
-          <div className="box">{itemList}</div>
+          <h2 className="text-center m-5">Our items</h2>
+          <div className="row">{itemList}</div>
         </div>
       </>
     );

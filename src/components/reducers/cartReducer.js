@@ -69,7 +69,9 @@ const initState = {
   addedItems: [],
   total: 0,
 };
+
 const cartReducer = (state = initState, action) => {
+  //INSIDE HOME COMPONENT
   if (action.type === ADD_TO_CART) {
     let addedItem = state.items.find((item) => item.id === action.id);
     //check if the action id exists in the addedItems
@@ -78,6 +80,7 @@ const cartReducer = (state = initState, action) => {
       addedItem.quantity += 1;
       return {
         ...state,
+        addedItems: [...state.addedItems, addedItem],
         total: state.total + addedItem.price,
       };
     } else {
@@ -91,7 +94,6 @@ const cartReducer = (state = initState, action) => {
         total: newTotal,
       };
     }
-    
   }
   if (action.type === REMOVE_ITEM) {
     let itemToRemove = state.addedItems.find((item) => action.id === item.id);
@@ -136,6 +138,7 @@ const cartReducer = (state = initState, action) => {
       };
     }
   }
+
   if (action.type === ADD_SHIPPING) {
     return {
       ...state,
@@ -152,4 +155,5 @@ const cartReducer = (state = initState, action) => {
     return state;
   }
 };
+
 export default cartReducer;

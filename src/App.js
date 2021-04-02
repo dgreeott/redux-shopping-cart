@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/" exact component={CartPage} />
+          <Route path="/cart" exact component={CartPage} />
         </Switch>
       </Router>
     </div>
