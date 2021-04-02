@@ -15,18 +15,18 @@ class Recipe extends Component {
 
   render() {
     return (
-        <div className="row m-3">
-          <div className="col-sm-8">
-            
-          </div>
-          <div className="col-sm-4">
-            <div className="collection">
-            <div className="row"><li className="collection-item">
+      <div className="row justify-content-center">
+        <div className="col-sm-6 text-center">
+          <div className="collection">
+            <div className="row justify-content-center">
+              <li className="collection-recipe">
                 <h3>
                   Total: <b>${this.props.total}</b>
                 </h3>
-              </li></div>
-            <div className="row"><li className="collection-item">
+              </li>
+            </div>
+            <div className="row justify-content-center">
+              <li className="collection-recipe">
                 <label>
                   <input
                     type="checkbox"
@@ -35,16 +35,16 @@ class Recipe extends Component {
                   />
                   <span>Shipping(+6$)</span>
                 </label>
-                
-              </li></div>
-            <div className="row"><div className="checkout">
-              <button className="btn btn-secondary">Checkout</button>
-            </div></div>
-              
-              
+              </li>
+            </div>
+            <div className="row justify-content-center">
+              <div className="checkout">
+                <button className="btn btn-secondary">Checkout</button>
+              </div>
             </div>
           </div>
         </div>
+      </div>
     );
   }
 }

@@ -26,7 +26,7 @@ class Cart extends Component {
       this.props.items.map((item) => {
         return (
           <>
-            <div className="row">
+            <div className="row" style={{background: "white"}}>
               <li className="collection-item" key={item.id}>
                 <div className="row m-4">
                   <div className="col-sm-3">
@@ -104,8 +104,8 @@ class Cart extends Component {
         <div className="row justify-content-center">
           <ul className="collection">{addedItems}</ul>
         </div>
-        <div className="row">
-          <div className="col-sm-12">
+        <div className="row justify-content-center">
+          <div className="col-sm text-center">
             <Recipe />
           </div>
         </div>
