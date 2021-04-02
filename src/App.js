@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Helmet from "react-helmet";
 
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./components/Home";
@@ -9,6 +10,12 @@ function App() {
   return (
     <div className="App">
       <Router>
+      <Helmet
+          bodyAttributes={{
+            style:
+              "background-color: #12232E",
+          }}
+        />
         <Navbar />
         <Switch>
           <Route path="/" exact component={HomePage} />

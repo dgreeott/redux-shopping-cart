@@ -13,7 +13,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbarItems justify-content-end">
+      <nav className="navbarItems justify-content-end sticky-top">
           <div className="col-sm-3">
             <Link to="/" className="brand-logo ">
               <h2>Shopping</h2>

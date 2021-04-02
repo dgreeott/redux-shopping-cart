@@ -1,36 +1,30 @@
 
+/* Items Styles */
+.card {
+  background-color: #EEFBFB;
+  color: #232323;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 25px;
+  box-shadow: 10px 10px 5px rgba(238, 251, 251, 0.4);
+}
 
-.box{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-.card{
-  width: 300px;
-}
 .card .card-image .card-title{
   color: black;
   font-weight: 400
 }
-.cart{
-  margin-top:40px;
-}
+
+
+/* Shopping Cart Styles */
 .collection .collection-item{
   display: flex;
 }
-.collection-item.avatar .title {
-  font-size: 20px;
-  font-weight: 500;
-  color: #ee6e73;
-  display: block;
-  margin-bottom: 20px;
-  
+
+.checkout, .shop {
+  color: #EEFBFB;
 }
+
 .collection .collection-item img{
-  width: 150px;
-  margin-right: 25px;
-}
-.item-desc{
-  align-self:center;
+  width: 200px;
 }
