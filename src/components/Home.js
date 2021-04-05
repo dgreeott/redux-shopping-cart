@@ -12,7 +12,7 @@ class Home extends Component {
       return (
         <div className="col-sm m-3">
           <div className="card" key={item.id}>
-            <div className="card-image-top m-3">
+            <div className="card-image m-3">
               <img src={item.img} alt={item.title} />
             </div>
             <div className="card-body">
