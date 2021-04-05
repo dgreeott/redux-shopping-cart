@@ -26,7 +26,7 @@ class Cart extends Component {
       this.props.items.map((item) => {
         return (
           <>
-            <div className="row" style={{background: "white"}}>
+            <div className="row" style={{ background: "white" }}>
               <li className="collection-item" key={item.id}>
                 <div className="row m-4">
                   <div className="col-sm-3">
@@ -49,7 +49,14 @@ class Cart extends Component {
                     <div className="row add-remove justify-content-center">
                       <div className="col-sm-2">
                         <Link to="/cart">
-                          <button className="btn btn-secondary">-</button>
+                          <button
+                            className="btn btn-secondary"
+                            onClick={() => {
+                              this.handleSubtractQuantity(item.id);
+                            }}
+                          >
+                            -
+                          </button>
                         </Link>
                       </div>
                       <div className="col-sm-2">
@@ -59,11 +66,23 @@ class Cart extends Component {
                       </div>
                       <div className="col-sm-2">
                         <Link to="/cart">
-                          <button className="btn btn-secondary">+</button>
+                          <button
+                            className="btn btn-secondary"
+                            onClick={() => {
+                              this.handleAddQuantity(item.id);
+                            }}
+                          >
+                            +
+                          </button>
                         </Link>
                       </div>
                       <div className="col-sm-6 text-center">
-                        <button className="btn btn-danger remove">
+                        <button
+                          className="btn btn-danger remove"
+                          onClick={() => {
+                            this.handleRemove(item.id);
+                          }}
+                        >
                           Remove
                         </button>
                       </div>

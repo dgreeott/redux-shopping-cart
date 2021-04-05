@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addToCart } from "./actions/cartActions";
 
-import { FaShoppingBag } from "react-icons/fa";
-
 class Home extends Component {
   handleClick = (id) => {
     this.props.addToCart(id);
