@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     let itemList = this.props.items.map((item) => {
       return (
-        <div className="col-sm m-3">
+        <div className="col-sm mb-2">
           <div className="card" key={item.id}>
             <div className="card-image m-3">
               <img src={item.img} alt={item.title} />
@@ -18,22 +18,19 @@ class Home extends Component {
             <div className="card-body">
               <span className="card-title m-3">
                 <h4>{item.title}</h4>
-                <h6>Price: {item.desc}$</h6>
               </span>
-              <div className="row">
-                <div className="col-sm-6">
-                  <h5>Price: ${item.price}</h5>
-                </div>
-                <div className="col-sm-6">
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => {
-                      this.handleClick(item.id);
-                    }}
-                  >
-                    Add to Cart
-                  </button>
-                </div>
+              <div className="row justify-content-center">
+                <h2>${item.price}</h2>
+              </div>
+              <div className="row justify-content-center">
+                <button
+                  className="btn btn-danger"
+                  onClick={() => {
+                    this.handleClick(item.id);
+                  }}
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>

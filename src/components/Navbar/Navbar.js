@@ -1,45 +1,44 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import * as AiIcons from "react-icons/ai";
+import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { IconContext } from "react-icons";
+import CartPage from "../Cart"
+
 import "./Navbar.css";
 
-import { ListItems } from "./ListItems.js";
+export default function Navbar() {
+  const [sidebar, setSideBar] = useState(false);
 
-class Navbar extends Component {
-  state = { clicked: false };
+  const showSidebar = () => setSideBar(!sidebar);
 
-  handleClick = () => {
-    this.setState({ clicked: !this.state.clicked });
-  };
-
-  render() {
-    return (
-      <nav className="navbarItems justify-content-end sticky-top">
-          <div className="col-sm-3">
-            <Link to="/" className="brand-logo ">
-              <h2>Shopping</h2>
+  return (
+    <>
+      <IconContext.Provider value={{ color: "#1b1a20" }}>
+        <div className="navbar justify-content-end">
+          <div className="col-sm-2">
+            <Link to="#" className="menu-bars">
+              <FiShoppingCart onClick={showSidebar} />
             </Link>
           </div>
-          <div className="col-sm-9">
-            <div className="menu-icon" onClick={this.handleClick}>
-              <i
-                className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
-              ></i>
+        </div>
+        </IconContext.Provider>
+        <IconContext.Provider value={{ color: "#ffffff" }}>
+        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+          <ul className="nav-menu-items" >
+            <li className="navbar-toggle">
+              <Link to="#" className="menu-bars">
+                <AiIcons.AiOutlineClose onClick={showSidebar} />
+              </Link>
+            </li>
+            <div className="row">
+              <div className="col-sm-11">
+                <CartPage />
+              </div>
             </div>
-            <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-              {ListItems.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <Link className={item.cName} to={item.url}>
-                      {item.title}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-      </nav>
-    );
-  }
+          </ul>
+        </nav>
+      </IconContext.Provider>
+    </>
+  );
 }
-
-export default Navbar;

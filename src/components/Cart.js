@@ -7,6 +7,7 @@ import {
   subtractQuantity,
 } from "./actions/cartActions";
 import Recipe from "./Recipe";
+import * as AiIcons from "react-icons/ai";
 
 class Cart extends Component {
   handleRemove = (id) => {
@@ -26,76 +27,50 @@ class Cart extends Component {
       this.props.items.map((item) => {
         return (
           <>
-            <div className="row" style={{ background: "white" }}>
+            <div className="row">
               <li className="collection-item" key={item.id}>
-                <div className="row m-4">
-                  <div className="col-sm-3">
+                <div className="row">
+                  <div className="col-sm">
                     <div className="item-img">
                       <img src={item.img} alt={item.img} className="" />
                     </div>
                   </div>
-                  <div className="col-sm-7">
-                    <div className="row">
+
+                  <div className="col-sm">
+                    <div className="row justify-content-center">
                       <div className="col-sm">
                         <span className="title">
                           <h2>
                             <b>{item.title}</b>
                           </h2>
                         </span>
-                        <p>{item.desc}</p>
-                      </div>
-                    </div>
-
-                    <div className="row add-remove justify-content-center">
-                      <div className="col-sm-2">
-                        <Link to="/cart">
-                          <button
-                            className="btn btn-secondary"
-                            onClick={() => {
-                              this.handleSubtractQuantity(item.id);
-                            }}
-                          >
-                            -
-                          </button>
-                        </Link>
-                      </div>
-                      <div className="col-sm-2">
-                        <p>
-                          <b>{item.quantity}</b>
-                        </p>
-                      </div>
-                      <div className="col-sm-2">
-                        <Link to="/cart">
-                          <button
-                            className="btn btn-secondary"
-                            onClick={() => {
-                              this.handleAddQuantity(item.id);
-                            }}
-                          >
-                            +
-                          </button>
-                        </Link>
-                      </div>
-                      <div className="col-sm-6 text-center">
-                        <button
-                          className="btn btn-danger remove"
-                          onClick={() => {
-                            this.handleRemove(item.id);
-                          }}
-                        >
-                          Remove
-                        </button>
+                        <div className="row add-remove justify-content-center">
+                          <div className="col-sm">
+                            <p>
+                              Quantity: <b>{item.quantity}</b>
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-sm-2 justify-content-end">
+                  <div className="col-sm-2 justify-content-center">
+                    <div className="row justify-content-center">
+                      <div className="col-sm text-center">
+                        <AiIcons.AiOutlineClose
+                          onClick={() => {
+                            this.handleRemove(item.id);
+                          }}
+                          size={30}
+                        />
+                      </div>
+                    </div>
                     <div className="row justify-content-end">
                       <div className="col-sm text-end">
                         <h4>
-                          <b>${item.price}</b>
+                          ${item.price}
                         </h4>
                       </div>
-                      <div className="col-sm justify-content-end"></div>
                     </div>
                   </div>
                 </div>
@@ -120,7 +95,7 @@ class Cart extends Component {
             <h2>You have ordered:</h2>
           </div>
         </div>
-        <div className="row justify-content-center">
+        <div className="row">
           <ul className="collection">{addedItems}</ul>
         </div>
         <div className="row justify-content-center">

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 class Recipe extends Component {
   componentWillUnmount() {
@@ -15,18 +16,14 @@ class Recipe extends Component {
 
   render() {
     return (
-      <div className="row justify-content-center">
-        <div className="col-sm-6 text-center">
-          <div className="collection">
-            <div className="row justify-content-center">
-              <li className="collection-recipe">
-                <h3>
-                  Total: <b>${this.props.total}</b>
-                </h3>
-              </li>
-            </div>
-            <div className="row justify-content-center">
-              <li className="collection-recipe">
+      <div className="row justify-content-center m-5">
+        <div className="col-sm text-center">
+          <div className="row">
+            <div className="col-sm-8">
+              <div className="row text-center">
+                <h5>SUBTOTAL:</h5>
+              </div>
+              <div className="row text-center">
                 <label>
                   <input
                     type="checkbox"
@@ -35,12 +32,21 @@ class Recipe extends Component {
                   />
                   <span>Shipping(+6$)</span>
                 </label>
-              </li>
-            </div>
-            <div className="row justify-content-center">
-              <div className="checkout">
-                <button className="btn btn-secondary">Checkout</button>
               </div>
+            </div>
+            <div className="col-sm-4 text-center">
+              <div className="row">
+                <h3>
+                  <b>${this.props.total}</b>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div className="row justify-content-center m-4">
+            <div className="checkout">
+              <Link to="/checkout">
+                <button className="btn btn-secondary">Checkout</button>
+              </Link>
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./components/Home";
 import CartPage from "./components/Cart";
+import CheckoutPage from "./components/Checkout";
 
 function App() {
   return (
@@ -13,13 +14,14 @@ function App() {
       <Helmet
           bodyAttributes={{
             style:
-              "background-color: #12232E",
+              "background-color: #FFFFFF",
           }}
         />
         <Navbar />
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/cart" exact component={CartPage} />
+          <Route path="/checkout" exact component={CheckoutPage} />
         </Switch>
       </Router>
     </div>
