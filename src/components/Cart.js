@@ -10,6 +10,7 @@ import Recipe from "./Recipe";
 import * as AiIcons from "react-icons/ai";
 
 class Cart extends Component {
+
   handleRemove = (id) => {
     this.props.removeItem(id);
   };
