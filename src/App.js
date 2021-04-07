@@ -7,16 +7,17 @@ import HomePage from "./components/Home/Home";
 import CartPage from "./components/Cart/Cart";
 import CheckoutPage from "./components/Checkout/Checkout";
 
+import "./App.css"
+
 function App() {
   return (
     <div className="App">
       <Router>
-      <Helmet
-          bodyAttributes={{
-            style:
-              "background-color: #FFFFFF",
-          }}
-        />
+        <Helmet>
+          <style>
+            {App.css}
+          </style>
+        </Helmet>
         <Navbar />
         <Switch>
           <Route path="/" exact component={HomePage} />

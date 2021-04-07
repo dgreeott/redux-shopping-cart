@@ -22,7 +22,7 @@ const initState = {
       title: "Hero",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 110,
+      price: 110.33,
       img: Item1,
     },
     {
@@ -30,7 +30,7 @@ const initState = {
       title: "Everday",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 80,
+      price: 80.72,
       img: Item2,
     },
     {
@@ -38,7 +38,7 @@ const initState = {
       title: "Rustic",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 120,
+      price: 120.99,
       img: Item3,
     },
     {
@@ -46,7 +46,7 @@ const initState = {
       title: "Climbers",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 260,
+      price: 260.23,
       img: Item4,
     },
     {
@@ -54,7 +54,7 @@ const initState = {
       title: "Pumps",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 160,
+      price: 160.44,
       img: Item5,
     },
     {
@@ -62,7 +62,31 @@ const initState = {
       title: "Greens",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 90,
+      price: 90.56,
+      img: Item6,
+    },
+    {
+      id: 7,
+      title: "Sneakers",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 80.00,
+      img: Item6,
+    },
+    {
+      id: 8,
+      title: "Boots",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 190.96,
+      img: Item6,
+    },
+    {
+      id: 9,
+      title: "Sandals",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 30.55,
       img: Item6,
     },
   ],

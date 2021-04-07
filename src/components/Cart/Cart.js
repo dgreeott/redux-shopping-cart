@@ -66,7 +66,7 @@ class Cart extends Component {
       })
     ) : (
       <>
-        <div className="row justify-content-center">
+        <div className="row justify-content-center m-3">
           <div className="col-sm text-center">
             <h1>Your Cart Is Empty...</h1>
           </div>

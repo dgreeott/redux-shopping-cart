@@ -1,11 +1,9 @@
-.checkout {
-  color: #eefbfb;
-  position: static;
-}
+
 
 .btn-checkout {
   background-color: rgba(0, 0, 0);
   color: #fff;
+  font-weight: bold;
   padding: 15px 0;
   width: 100%;
   cursor: pointer;
@@ -13,5 +11,7 @@
 }
 
 .btn-checkout:hover {
-  background-color: #eabf00;
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+  font-weight: bold;
 }

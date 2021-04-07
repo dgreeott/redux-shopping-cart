@@ -14,7 +14,7 @@ class Home extends Component {
       return (
         <div className="col-sm mb-3">
           <div className="card" key={item.id}>
-            <div className="card-image m-3">
+            <div className="card-image ml-4 mr-4 mt-4">
               <img src={item.img} alt={item.title} />
             </div>
             <div className="card-body">
@@ -41,8 +41,8 @@ class Home extends Component {
     });
     return (
       <>
-        <div className="container shop justify-content-center mb-5">
-          <div className="row m-3">{itemList}</div>
+        <div className="container shop justify-content-center pb-5">
+          <div className="row pb-5">{itemList}</div>
         </div>
       </>
     );

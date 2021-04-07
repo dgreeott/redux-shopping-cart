@@ -18,10 +18,10 @@ class Recipe extends Component {
 
   render() {
     return (
-      <div className="row justify-content-center m-5">
+      <div className="row justify-content-center ">
         <div className="col-sm text-center">
           <div className="row">
-            <div className="col-sm-8">
+            <div className="col-sm-8 text-center">
               <div className="row text-center">
                 <h5>SUBTOTAL:</h5>
               </div>
@@ -36,8 +36,8 @@ class Recipe extends Component {
                 </label>
               </div>
             </div>
-            <div className="col-sm-4 text-center">
-              <div className="row">
+            <div className="col-sm-4 text-end">
+              <div className="row justify-content-end">
                 <h3>
                   <b>${this.props.total}</b>
                 </h3>
@@ -45,7 +45,7 @@ class Recipe extends Component {
             </div>
           </div>
           <div className="row justify-content-center m-4">
-            <div className="col-sm-12">
+            <div className="col-sm">
               <div className="checkout">
                 <Link to="/checkout">
                   <button className="btn-checkout">Checkout</button>
