@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
+import "./Recipe.css";
+
 class Recipe extends Component {
   componentWillUnmount() {
     if (this.refs.shipping.checked) this.props.substractShipping();
@@ -43,10 +45,12 @@ class Recipe extends Component {
             </div>
           </div>
           <div className="row justify-content-center m-4">
-            <div className="checkout">
-              <Link to="/checkout">
-                <button className="btn btn-secondary">Checkout</button>
-              </Link>
+            <div className="col-sm-12">
+              <div className="checkout">
+                <Link to="/checkout">
+                  <button className="btn-checkout">Checkout</button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,17 @@
+.checkout {
+  color: #eefbfb;
+  position: static;
+}
+
+.btn-checkout {
+  background-color: rgba(0, 0, 0);
+  color: #fff;
+  padding: 15px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-checkout:hover {
+  background-color: #eabf00;
+}

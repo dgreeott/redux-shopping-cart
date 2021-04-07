@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Helmet from "react-helmet";
 
 import Navbar from "./components/Navbar/Navbar";
-import HomePage from "./components/Home";
-import CartPage from "./components/Cart";
-import CheckoutPage from "./components/Checkout";
+import HomePage from "./components/Home/Home";
+import CartPage from "./components/Cart/Cart";
+import CheckoutPage from "./components/Checkout/Checkout";
 
 function App() {
   return (

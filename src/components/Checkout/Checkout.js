@@ -3,7 +3,9 @@ import { connect } from "react-redux";
 import {
   removeItem,
   addToCart,
-} from "./actions/cartActions";
+} from "../actions/cartActions";
+
+import "./Checkout.css"
 
 class Cart extends Component {
   handleRemove = (id) => {

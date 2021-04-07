@@ -3,7 +3,7 @@ import * as AiIcons from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
-import CartPage from "../Cart"
+import CartPage from "../Cart/Cart"
 
 import "./Navbar.css";
 
