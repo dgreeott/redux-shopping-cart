@@ -52,11 +52,6 @@ class Cart extends Component {
         <div className="row justify-content-center">
           <ul className="collection">{addedItems}</ul>
         </div>
-        <div className="row justify-content-center">
-          <div className="col-sm text-center">
-    
-          </div>
-        </div>
       </div>
     );
   }
