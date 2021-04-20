@@ -31,7 +31,7 @@ class Cart extends Component {
             <div className="row new-item" key={item.id}>
               <div className="col-sm-4">
                 <div className="item-img">
-                  <img src={item.img} alt={item.img} className="" />
+                  <img src={item.img} alt={item.img} />
                 </div>
               </div>
 
