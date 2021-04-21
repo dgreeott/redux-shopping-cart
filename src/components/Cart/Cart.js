@@ -8,7 +8,7 @@ import {
 import Recipe from "../Recipe/Recipe";
 import * as AiIcons from "react-icons/ai";
 
-import "./Cart.css"
+import "./Cart.css";
 
 class Cart extends Component {
   handleRemove = (id) => {
@@ -35,16 +35,39 @@ class Cart extends Component {
                 </div>
               </div>
 
-              <div className="col-sm-5">
+              <div className="col-sm">
                 <div className="row">
-                  <h2>
-                    <b>{item.title}</b>
-                  </h2>
+                  <div className="col-sm">
+                    <h2>
+                      <b>{item.title}</b>
+                    </h2>
+                  </div>
                 </div>
                 <div className="row">
-                  <p>
-                    Quantity: <b>{item.quantity}</b>
-                  </p>
+                  <div className="col-sm-4 text-center">
+                    <button
+                      onClick={() => {
+                        this.handleSubtractQuantity(item.id);
+                      }}
+                    >
+                      -
+                    </button>
+                  </div>
+                  <div className="col-sm-4 text-center">
+                    <p>
+                      <b>{item.quantity}</b>
+                    </p>
+                  </div>
+
+                  <div className="col-sm-4 text-center">
+                    <button
+                      onClick={() => {
+                        this.handleAddQuantity(item.id);
+                      }}
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
               </div>
               <div className="col-sm-3 justify-content-center">
@@ -57,7 +80,7 @@ class Cart extends Component {
                   />
                 </div>
                 <div className="row justify-content-end">
-                  <h4>${item.price}</h4>
+                  <h4>${item.price.toFixed(2)}</h4>
                 </div>
               </div>
             </div>

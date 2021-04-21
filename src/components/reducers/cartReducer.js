@@ -22,7 +22,7 @@ const initState = {
       title: "Hero",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 110.33,
+      price: 110,
       img: Item1,
     },
     {
@@ -30,7 +30,7 @@ const initState = {
       title: "Everday",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 80.72,
+      price: 80,
       img: Item2,
     },
     {
@@ -38,7 +38,7 @@ const initState = {
       title: "Rustic",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 120.99,
+      price: 120,
       img: Item3,
     },
     {
@@ -46,7 +46,7 @@ const initState = {
       title: "Climbers",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 260.23,
+      price: 260,
       img: Item4,
     },
     {
@@ -54,7 +54,7 @@ const initState = {
       title: "Pumps",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 160.44,
+      price: 160,
       img: Item5,
     },
     {
@@ -62,7 +62,7 @@ const initState = {
       title: "Greens",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 90.56,
+      price: 90,
       img: Item6,
     },
     {
@@ -70,7 +70,7 @@ const initState = {
       title: "Sneakers",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 80.00,
+      price: 80,
       img: Item6,
     },
     {
@@ -78,7 +78,7 @@ const initState = {
       title: "Boots",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 190.96,
+      price: 190,
       img: Item6,
     },
     {
@@ -86,7 +86,7 @@ const initState = {
       title: "Sandals",
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-      price: 30.55,
+      price: 30,
       img: Item6,
     },
   ],
