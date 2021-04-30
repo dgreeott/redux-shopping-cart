@@ -1,32 +1,37 @@
 /* Shopping Cart Styles */
 
 .checkout {
-    color: #eefbfb;
-    position: static;
-  }
-  
-  .item-img img {
-    vertical-align: middle;
-    width: 100%;
-    margin-right: 3%;
-  }
-  
-  .new-item {
-    position: relative;
-    box-sizing: border-box;
-    padding: 5%;
-    transition: background-color 0.2s, opacity 0.2s;
-  }
-  
-  .item {
-    position: relative;
-    min-height: 280px;
-  }
-  
-  .close {
-    border-radius: 50%;
-    position: absolute;
-    background-size: auto 100%;
-    z-index: 2;
-  }
-  
+  color: #eefbfb;
+  position: static;
+}
+
+.item-img img {
+  vertical-align: middle;
+  width: 100%;
+  margin-right: 3%;
+}
+
+.new-item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 5%;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.items {
+  position: relative;
+  min-height: 280px;
+  max-height: calc(70vh - 9rem);
+  overflow-y: auto;
+}
+
+.close {
+  border-radius: 50%;
+  position: absolute;
+  background-size: auto 100%;
+  z-index: 2;
+}
+
+.recipe {
+  color: #eefbfb;
+}

@@ -21,7 +21,7 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-      <IconContext.Provider value={{ color: "#ffffff" }}>
+      <IconContext.Provider value={{ color: "#eefbfb" }}>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items">
             <li className="navbar-toggle">
